@@ -4,112 +4,121 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,700"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
     <title>Book Library</title>
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <div class="left">
-          <img src="" alt="" />
-          <h2>Book Library</h2>
+    <main>
+      <div class="top">
+        <img src="img/Open Book.png" alt="open book icon" />
+        <h2>Book Library</h2>
+      </div>
+
+      <form action="#" class="booklist" autocomplete="off">
+        <div class="booklist__new-book">
+          <div class="new-book__input-group">
+            <label for="new-book">Add a Book</label>
+            <input
+              type="text"
+              id="new-book"
+              name="new-book"
+              placeholder="Book name"
+            />
+            <input type="text" id="author" name="author" placeholder="Author" />
+            <input
+              type="number"
+              id="pages"
+              name="pages"
+              placeholder="Number of Pages"
+            />
+          </div>
+
+          <button type="submit">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="192"
+              height="192"
+              fill="#000000"
+              viewBox="0 0 256 256"
+            >
+              <rect width="256" height="256" fill="none"></rect>
+              <line
+                x1="40"
+                y1="128"
+                x2="216"
+                y2="128"
+                fill="none"
+                stroke="#000000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="30"
+              ></line>
+              <line
+                x1="128"
+                y1="40"
+                x2="128"
+                y2="216"
+                fill="none"
+                stroke="#000000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="30"
+              ></line>
+            </svg>
+            <span>Add Book</span>
+          </button>
         </div>
-        <div class="right">
-          <form action="#" class="booklist" autocomplete="off">
-            <div class="booklist__new-book">
-              <label for="new-book">Add a Book</label>
-              <input
-                type="text"
-                id="new-book"
-                name="new-book"
-                placeholder="The Catcher in the Rye"
-              />
-              <input
-                type="text"
-                id="author"
-                name="author"
-                placeholder="J. D. Salinger"
-              />
-              <input type="number" id="pages" name="pages" placeholder="277" />
-            </div>
-            <button type="submit">
+
+        <!-- List of Books -->
+        <ul class="booklist">
+          <li class="book">
+            <span class="book__info"
+              >The Catcher in the Rye - J. D. Salinger - 277 Pages</span
+            >
+            <button type="button" id="book__read-button">Unread</button>
+            <button type="button" class="book__delete-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="192"
                 height="192"
-                fill="#000000"
+                fill="#fff"
                 viewBox="0 0 256 256"
               >
                 <rect width="256" height="256" fill="none"></rect>
                 <line
-                  x1="40"
-                  y1="128"
-                  x2="216"
-                  y2="128"
-                  fill="none"
-                  stroke="#000000"
+                  x1="200"
+                  y1="56"
+                  x2="56"
+                  y2="200"
+                  stroke="#fff"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="16"
+                  stroke-width="30"
                 ></line>
                 <line
-                  x1="128"
-                  y1="40"
-                  x2="128"
-                  y2="216"
-                  fill="none"
-                  stroke="#000000"
+                  x1="200"
+                  y1="200"
+                  x2="56"
+                  y2="56"
+                  stroke="#fff"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="16"
+                  stroke-width="30"
                 ></line>
               </svg>
-              <span>Add Book</span>
             </button>
-            <!-- List of Books -->
-            <ul class="booklist">
-              <li class="book">
-                <span class="book__info"
-                  >The Catcher in the Rye - J. D. Salinger - 277 Pages</span
-                ><button type="button">Unread</button>
-                <button type="button" class="book__delete-button">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="192"
-                    height="192"
-                    fill="#000000"
-                    viewBox="0 0 256 256"
-                  >
-                    <rect width="256" height="256" fill="none"></rect>
-                    <line
-                      x1="200"
-                      y1="56"
-                      x2="56"
-                      y2="200"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="16"
-                    ></line>
-                    <line
-                      x1="200"
-                      y1="200"
-                      x2="56"
-                      y2="56"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="16"
-                    ></line>
-                  </svg>
-                </button>
-              </li>
-              <li class="book"></li>
-              <li class="book"></li>
-            </ul>
-          </form>
-        </div>
-      </header>
-      <main></main>
-    </div>
+          </li>
+          <li class="book"></li>
+          <li class="book"></li>
+        </ul>
+      </form>
+    </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
