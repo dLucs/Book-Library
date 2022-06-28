@@ -189,7 +189,7 @@ main h2 {
 }
 
 /* ------------- Book List -------------------*/
-.booklist ul {
+.booklist__books {
   padding: 0;
 }
 .book {
@@ -221,6 +221,11 @@ main h2 {
   width: auto;
 }
 
+.book__read-button.clicked {
+  background-color: var(--teal-200);
+  border: 2px solid var(--teal-200);
+}
+
 .book button:nth-of-type(2) {
   background-color: var(--red-300);
   border: 2px solid var(--red-300);
@@ -231,7 +236,15 @@ main h2 {
   border: 2px solid var(--red-400);
 }
 
-#book__read-button.clicked {
-  background-color: var(--teal-200);
-  border: 2px solid var(--teal-200);
+.book__info {
+  width: 70%;
+}
+
+.booklist__books + div {
+  display: none;
+}
+
+.booklist__books:empty + div {
+  display: block;
+  text-align: center;
 }

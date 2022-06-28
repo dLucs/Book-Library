@@ -27,14 +27,14 @@
               type="text"
               id="new-book"
               name="new-book"
-              placeholder="Book name"
+              placeholder="Book name" required
             />
-            <input type="text" id="author" name="author" placeholder="Author" />
+            <input type="text" id="author" name="author" placeholder="Author" required/>
             <input
               type="number"
               id="pages"
               name="pages"
-              placeholder="Number of Pages"
+              placeholder="Number of Pages" required
             />
           </div>
 
@@ -75,12 +75,12 @@
         </div>
 
         <!-- List of Books -->
-        <ul class="booklist">
+        <ul class="booklist__books">
           <li class="book">
             <span class="book__info"
-              >The Catcher in the Rye - J. D. Salinger - 277 Pages</span
+              ><span class="title_info">The Catcher in the Rye</span> | <span class="author_info">J. D. Salinger</span> | <span class="pages_info">277 Pages</span></span
             >
-            <button type="button" id="book__read-button">Unread</button>
+            <button class="book__read-button">Unread</button>
             <button type="button" class="book__delete-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -113,9 +113,45 @@
               </svg>
             </button>
           </li>
-          <li class="book"></li>
+          <li class="book">
+            <span class="book__info"
+            >Maid | A.Sommer | 277 Pages</span
+          >
+          <button class="book__read-button">Unread</button>
+          <button type="button" class="book__delete-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="192"
+              height="192"
+              fill="#fff"
+              viewBox="0 0 256 256"
+            >
+              <rect width="256" height="256" fill="none"></rect>
+              <line
+                x1="200"
+                y1="56"
+                x2="56"
+                y2="200"
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="30"
+              ></line>
+              <line
+                x1="200"
+                y1="200"
+                x2="56"
+                y2="56"
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="30"
+              ></line>
+            </svg>
+          </li>
           <li class="book"></li>
         </ul>
+        <div class="booklist__empty-state">Your Book Library is empty, add some more books!📚</div>
       </form>
     </main>
 
