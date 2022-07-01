@@ -27,18 +27,18 @@
               type="text"
               id="new-book"
               name="new-book"
-              placeholder="Book name" required
+              placeholder="Book name" 
             />
-            <input type="text" id="author" name="author" placeholder="Author" required/>
+            <input type="text" id="author" name="author" placeholder="Author" />
             <input
               type="number"
               id="pages"
               name="pages"
-              placeholder="Number of Pages" required
+              placeholder="Number of Pages" 
             />
           </div>
 
-          <button type="submit">
+          <button type="submit" id="submit">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="192"
@@ -78,7 +78,7 @@
         <ul class="booklist__books">
           <li class="book">
             <span class="book__info"
-              ><span class="title_info">The Catcher in the Rye</span> | <span class="author_info">J. D. Salinger</span> | <span class="pages_info">277 Pages</span></span
+              ><span class="title_info">The Catcher in the Rye</span> ⏤ <span class="author_info">J. D. Salinger</span> ⏤ <span class="pages_info">277 Pages</span></span
             >
             <button class="book__read-button">Unread</button>
             <button type="button" class="book__delete-button">
@@ -149,12 +149,14 @@
               ></line>
             </svg>
           </li>
-          <li class="book"></li>
         </ul>
         <div class="booklist__empty-state">Your Book Library is empty, add some more books!📚</div>
       </form>
     </main>
+  <!-- Adds DOMPurify library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/1.0.7/purify.min.js"></script>
 
     <script src="script.js"></script>
   </body>
+
 </html>
