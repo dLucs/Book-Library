@@ -1,4 +1,3 @@
-const readButtons = document.querySelectorAll(".book__read-button");
 const bookList = document.querySelector(".booklist");
 
 let library = [];
@@ -21,7 +20,7 @@ bookList.addEventListener("submit", (event) => {
   const title = document.getElementById("new-book").value.trim();
   const author = document.getElementById("author").value.trim();
   const pages = document.getElementById("pages").value.trim();
-  const status = document.querySelector(".book__read-button").textContent;
+  const status = "Unread";
 
   if (!title) return;
   if (!author) return;
@@ -33,6 +32,7 @@ bookList.addEventListener("submit", (event) => {
 
   const bookElement = document.createElement("li");
   const bookCollection = bookList.querySelector(".booklist__books");
+  bookElement._book = book;
 
   library.forEach((book) => {
     bookElement.classList.add("book");
@@ -93,5 +93,10 @@ function bookRead(event) {
     event.target.classList.toggle("clicked");
     event.target.textContent =
       event.target.textContent == "Unread" ? "Read" : "Unread";
+    //update object
+    if (event.target.parentNode._book)
+      event.target.parentNode._book.status = event.target.textContent;
+
+    console.log(library);
   }
 }
