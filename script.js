@@ -1,5 +1,5 @@
 const bookList = document.querySelector(".booklist");
-
+const bookCards = document.querySelector(".booklist__books");
 let library = [];
 
 // ---------------------- Book Constructor -------------------------------
@@ -85,9 +85,9 @@ function clearInputs() {
 
 //-------------------Toggle Read or Unread Button --------------------------
 
-bookList.addEventListener("click", (e) => bookRead(e));
+bookList.addEventListener("click", (e) => bookEdit(e));
 
-function bookRead(event) {
+function bookEdit(event) {
   if (event.target.classList.contains("book__read-button")) {
     console.log(event.target);
     event.target.classList.toggle("clicked");
@@ -96,6 +96,15 @@ function bookRead(event) {
     //update object
     if (event.target.parentNode._book)
       event.target.parentNode._book.status = event.target.textContent;
+    console.log(library);
+  }
+  //-------------------Deleting Books --------------------------
+
+  if (event.target.matches(".book__delete-button")) {
+    const bookElement = event.target.parentElement;
+    bookCards.removeChild(bookElement);
+    const position = library.indexOf(event.target.parentNode._book);
+    library.splice(position, 1);
 
     console.log(library);
   }

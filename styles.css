@@ -249,3 +249,7 @@ main h2 {
   display: block;
   text-align: center;
 }
+
+.book__delete-button > svg {
+  pointer-events: none;
+}
