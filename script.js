@@ -106,6 +106,10 @@ function bookEdit(event) {
     const position = library.indexOf(event.target.parentNode._book);
     library.splice(position, 1);
 
+    if (bookCards.children.length === 0) {
+      bookCards.innerHTML = "";
+    }
+
     console.log(library);
   }
 }
