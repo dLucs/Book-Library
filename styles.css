@@ -221,11 +221,6 @@ main h2 {
   width: auto;
 }
 
-.book__read-button.clicked {
-  background-color: var(--teal-200);
-  border: 2px solid var(--teal-200);
-}
-
 .book button:nth-of-type(2) {
   background-color: var(--red-300);
   border: 2px solid var(--red-300);
