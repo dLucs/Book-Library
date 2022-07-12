@@ -89,7 +89,6 @@ function clearInputs() {
 //-------------------Toggle Read or Unread Button --------------------------
 
 bookList.addEventListener("click", (e) => bookEdit(e));
-
 function bookEdit(event) {
   if (event.target.classList.contains("book__read-button")) {
     event.target.textContent =
